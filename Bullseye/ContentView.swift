@@ -12,8 +12,6 @@ struct ContentView: View {
     
 
     @State var alertIsVisible: Bool = false
-    //Remember to delete this later on!
-    //@State var whosThereIsVisible: Bool = true
     
     var body: some View {
         VStack {
@@ -33,16 +31,6 @@ struct ContentView: View {
                     
                 }
             }
-            /*Button(action: {
-                self.whosThereIsVisible=true
-            }) {
-                Text(/*@START_MENU_TOKEN@*/"Knock Knock"/*@END_MENU_TOKEN@*/)
-            }
-            .alert(isPresented: $whosThereIsVisible) { () ->
-                Alert in
-                return Alert(title: Text("Who's there?"), message: Text("Little old lady"),
-                             dismissButton: .default(Text("Little old lady who !?")))
-        }*/
     }
 }
 
