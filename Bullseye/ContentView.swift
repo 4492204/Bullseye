@@ -63,7 +63,9 @@ struct ContentView: View {
                 
                 // Score row
                 HStack {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Button(action: {
+                        self.startNewGame()
+                    }) {
                         Text(/*@START_MENU_TOKEN@*/"Start over"/*@END_MENU_TOKEN@*/)
                     }
                     Spacer()
@@ -119,8 +121,14 @@ struct ContentView: View {
         }
         return title
     }
-}
+  func startNewGame () {
+     score = 0
+     round = 1
+     sliderValue = 50.0
+     target = Int.random (in: 1...100)
+ }
 
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
